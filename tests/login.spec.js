@@ -22,6 +22,7 @@ test.describe('Login Tests', () => {
     await loginPage.clickOnCredentialsSubmitButton();
     await page.waitForURL(/naukri\.com/, { timeout: 10000 });
     await expect(page.locator('div.view-profile-wrapper')).toBeVisible();
+    console.log("login successfully");
   });
 
   test('TC-02: Error message shown on invalid password', async ({ loginPage }) => {
